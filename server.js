@@ -1,6 +1,8 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-Layouts');
 const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const session = require('express-session');
 const connectDB = require('./config/database');
 
 
@@ -21,6 +23,25 @@ app.set('view engine', 'ejs');
 //Bodyparser - included with Express
 app.use(express.urlencoded({ extended: false }));
 
+//Express Session Middleware
+app.use(
+    session({
+      secret: 'secret',
+      resave: true,
+      saveUninitialized: true
+    })
+);
+
+//Connect flash
+app.use(flash());
+
+//Global Variables
+app.use(function(req, res, next) {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+});
 
 //Routes - 
 //for index.js file in routes folder
