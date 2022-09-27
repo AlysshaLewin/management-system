@@ -4,9 +4,12 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const connectDB = require('./config/database');
-
+const passport = require('passport');
 
 const app = express();
+
+//Passport config
+require('./config/passport')(passport);
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -21,7 +24,7 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 //Bodyparser - included with Express
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 //Express Session Middleware
 app.use(
@@ -31,6 +34,10 @@ app.use(
       saveUninitialized: true
     })
 );
+
+//Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Connect flash
 app.use(flash());
