@@ -50,6 +50,10 @@ app.use(function(req, res, next) {
     next();
 });
 
+
+//Static Folder
+app.use(express.static('assets'));
+
 //Routes - 
 //for index.js file in routes folder
 app.use('/', require('./routes/index'));
