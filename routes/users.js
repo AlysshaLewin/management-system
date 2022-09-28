@@ -5,6 +5,9 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
+const services = require('../services/render');
+const controller = require('../controller/controller');
+
 
 //Load User model
 const User = require('../models/User');
