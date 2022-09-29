@@ -14,5 +14,9 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
   })
 );
 
+//Add User
+router.get("/add-user", (req, res) => {
+  res.render('add_user');
+});
 
 module.exports = router;
