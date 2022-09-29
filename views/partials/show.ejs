@@ -1,15 +1,15 @@
-<% for(var i = 0; i < Userforms.length; i++) { %>
+<% for(var i = 0; i < userforms.length; i++) { %>
 <tr>
     <td><%= i + 1 %></td>
-    <td><%= Userforms[i].name %></td>
-    <td><%= Userforms[i].email %></td>
-    <td><%= Userforms[i].gender %></td>
-    <td><%= Userforms[i].status %></td>
+    <td><%= userforms[i].name %></td>
+    <td><%= userforms[i].email %></td>
+    <td><%= userforms[i].gender %></td>
+    <td><%= userforms[i].status %></td>
     <td>
-        <a href="/update-user?id=<%= Userforms[i]._id%>" class="btnborder-shadow update">
+        <a href="/update-user?id=<%= userforms[i]._id%>" class="btnborder-shadow update">
             <span class="text-gradient"><i class="fa-solid fa-pencil"></i></i></span>
         </a>
-        <a class="btn border-shadow delete" data-id=<%= Userforms[i]_id%> >
+        <a class="btn border-shadow delete" data-id=<%= userforms[i]_id%> >
             <span class="text-gradient"><i class="fa-solid fa-x"></i><i></span>
         </a>
     </td>
