@@ -51,7 +51,7 @@ app.use(function(req, res, next) {
 });
 
 //Static Folder
-app.use(express.static(__dirname + '/assets'));
+app.use(express.static('/assets'));
 
 
 //Routes - 
