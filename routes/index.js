@@ -18,7 +18,7 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
 //HomeRoute
 exports.homeRoutes = (req, res) => {
   // Make a get request to /api/users
-  axios.get('http://localhost:6500/api/users')
+  axios.get('http://localhost:5000/api/users')
       .then(function(response){
           res.render('dashboard', { userforms : response.data });
       })
@@ -33,7 +33,7 @@ router.get("/add-user", (req, res) => {
 });
 
 //Update User
-router.get('http://localhost:6500/api/users', { params : { id : req.query.id }})
+router.get('http://localhost:5000/api/users', { params : { id : req.query.id }})
   .then(function(userdata){
     res.render("update_user", { userforms : userdata.data})
 })
