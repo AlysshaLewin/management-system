@@ -1,0 +1,48 @@
+<%- include('partials/header') -%>
+
+
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+          <div>
+              <p><strong>User Name</strong>: <%= user.userName %></p>
+              <p><strong>Email</strong>: <%= user.email %></p>
+              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          </div>     
+    </div>
+  </div>
+</div>
+
+  <!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+          <div class="box-nav d-flex justify-between">
+              <a href="/add-user" class="border-shadow">
+                  <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+              </a>
+          </div>
+
+          <!-- form handling -->
+          <form action="/" method="POST">
+              <table class="table">
+                  <thead class="thead-dark">
+                      <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>@Email</th>
+                          <th>Gender</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <%- include('partials/show') %>
+                  </tbody>
+              </table>
+          </form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+
+<%- include('partials/footer') -%>
