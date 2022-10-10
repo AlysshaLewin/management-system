@@ -4,7 +4,7 @@ const Userform = require('../models/Form');
 exports.create = (req,res)=>{
     // validate request
     if(!req.body){
-        res.status(400).send({ message : "Content can not be emtpy!"});
+        res.status(400).send({ message : "Content can not be empty!"});
         return;
     }
 
