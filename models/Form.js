@@ -1,28 +1,31 @@
-const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
+const mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-    userName: {
+//forms data
+const FormSchema = new mongoose.Schema({
+    name: {
         type: String,
         required: true
+    },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users",
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
-    password: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Date,
-        default: Date.now
-    }
-});
+    gender: String,
+    status: String
+})
+
+const Userform = mongoose.model("Userform", FormSchema);
+
 
 // Password hash middleware.
 
-UserSchema.pre("save", function save(next) {
+FormSchema.pre("save", function save(next) {
     const user = this;
     if (!user.isModified("password")) {
       return next();
@@ -43,14 +46,15 @@ UserSchema.pre("save", function save(next) {
   
 // Helper method for validating user's password.
   
-UserSchema.methods.comparePassword = function comparePassword(
+FormSchema.methods.comparePassword = function comparePassword(
     candidatePassword,
     cb
-) {
+  ) {
     bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
       cb(err, isMatch);
     });
 };
   
-module.exports = mongoose.model("User", UserSchema);
-  
+
+
+module.exports = Userform;
