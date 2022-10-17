@@ -1,32 +1,114 @@
-# Management-System
+<div align="center">
+  <h3 align="center">Management System</h3>
+
+  <p align="center">
+    A management system for users.
+    <br />
+    <br />
+    <br />
+  </p>
+</div>
 
 
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#lessons-learned">Lessons Learned</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-![alt tag](http://placecorgi.com/1200/650)
 
-## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, Framework of choice
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write *something*. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+<div align="center">
+  <img src="#" alt="" />
+</div>
 
-## Optimizations
-*(optional)*
+<br/>
+Manage users to a management system database.
 
-You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Lessons Learned:
+### Built with
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+- Mongoose
+- Express.js
+- Node
+- EJS
+- Passport
+- JavaScript
+- CSS
 
-## Examples:
-Take a look at these couple examples that I have in my own portfolio:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Palettable:** https://github.com/alecortega/palettable
+<!-- GETTING STARTED -->
+## Getting Started
 
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
+### Installation
 
-**Patch Panel:** https://github.com/alecortega/patch-panel
+_In order to clone a local copy of this repository, please follow the steps below._
+
+1. Navigate to the folder you would like to store the project
+2. Clone the repo
+   ```sh
+   git clone https://github.com/AlysshaLewin/management-system.git
+   ```
+3. Switch into the directory that was just created
+    ```sh
+    cd management-system
+    ```
+4. Install NPM packages
+   ```sh
+   npm install
+   ```
+5. Navigate to the config folder
+6. Create a .env file there called `.env`
+7. Enter your MongoURI string in `.env` with the key `DB_STRING`
+   ```sh
+   DB_STRING="<Replace everything in quotes with MongoDB Connection String>"
+   ```
+8. Create a session secret for express sessions called `SESSION_SECRET`
+    ```sh
+    SESSION_SECRET="<any string value>"
+    ```
+
+9. To run the application, use `npm run start` to run the app in a development environment
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Lessons Learned -->
+## Lessons Learned
+
+coming soon...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- CONTACT -->
+## Contact
+
+Twitter - [@AlysshaLewin](https://twitter.com/alysshalewin)
+
+Email - [Contact Me](mailto:alyssha.lew@gmail.com)
+
+Project Link: [https://github.com/AlysshaLewin/management-system](https://github.com/AlysshaLewin/management-system)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
