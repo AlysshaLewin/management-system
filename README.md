@@ -44,7 +44,7 @@
 <br/>
 Manage users to a management system database.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Built with
 
@@ -56,7 +56,7 @@ Manage users to a management system database.
 - JavaScript
 - CSS
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -91,7 +91,6 @@ _In order to clone a local copy of this repository, please follow the steps belo
 
 9. To run the application, use `npm run start` to run the app in a development environment
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- Lessons Learned -->
@@ -99,7 +98,6 @@ _In order to clone a local copy of this repository, please follow the steps belo
 
 coming soon...
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
@@ -111,4 +109,3 @@ Email - [Contact Me](mailto:alyssha.lew@gmail.com)
 
 Project Link: [https://github.com/AlysshaLewin/management-system](https://github.com/AlysshaLewin/management-system)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
