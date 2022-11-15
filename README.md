@@ -41,8 +41,7 @@
   <img src="#" alt="" />
 </div>
 
-<br/>
-Manage users to a management system database.
+CRUD App that allows the user to manage users to a management system database.
 
 
 
